@@ -1,5 +1,6 @@
 import { Page } from '@playwright/test';
 
+// Common function to login to AdventureLog
 export async function login(page: Page, username = 'admin', password = 'admin') {
   await page.goto('http://localhost:8015/');
   await page.getByRole('listitem').filter({ hasText: 'Login' }).getByRole('button').click();
