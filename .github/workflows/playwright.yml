@@ -3,11 +3,11 @@ on:
   pull_request:
     paths:
       - "frontend/**"
-      - ".github/workflows/frontend-test.yml"
+      - ".github/workflows/playwright.yml"
   push:
     paths:
       - "frontend/**"
-      - ".github/workflows/frontend-test.yml"
+      - ".github/workflows/playwright.yml"
 jobs:
   playwright:
     timeout-minutes: 60
