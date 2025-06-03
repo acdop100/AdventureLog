@@ -12,6 +12,9 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./frontend
     steps:
     - uses: actions/checkout@v4
     - name: Run docker compose
@@ -40,6 +43,8 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: lts/*
+    - name: Install Dependencies
+      run: npx i -D
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
