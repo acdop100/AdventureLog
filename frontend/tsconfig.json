@@ -1,5 +1,8 @@
 {
 	"extends": "./.svelte-kit/tsconfig.json",
+	"include": [
+		"./playwright.config.ts",
+	],
 	"compilerOptions": {
 		"allowJs": true,
 		"checkJs": true,
@@ -11,6 +14,6 @@
 		"strict": true,
 		"module": "ESNext",
 		"moduleResolution": "bundler",
-		"types": ["unplugin-icons/types/svelte"] // add this line
+		"types": ["unplugin-icons/types/svelte", "node"] // add this line
 	}
 }
